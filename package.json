@@ -35,7 +35,8 @@
 	"scripts": {
 		"build": "directus-extension build",
 		"dev": "directus-extension build -w --no-minify",
-		"link": "directus-extension link",
+		"link": "./scripts/link.sh",
+		"upgrade": "./scripts/upgrade.sh",
 		"add": "directus-extension add"
 	},
 	"devDependencies": {
