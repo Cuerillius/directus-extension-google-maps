@@ -20,6 +20,24 @@ Add the following environment variables to your `docker-compose.yml` file, repla
       CONTENT_SECURITY_POLICY_DIRECTIVES__IMG_SRC: "'self' blob: data: https://maps.gstatic.com https://maps.googleapis.com khmdb0.google.com khmdb0.googleapis.com khmdb1.google.com khmdb1.googleapis.com khm.google.com khm.googleapis.com khm0.google.com khm0.googleapis.com khm1.google.com khm1.googleapis.com khms0.google.com khms0.googleapis.com khms1.google.com khms1.googleapis.com khms2.google.com khms2.googleapis.com khms3.google.com khms3.googleapis.com streetviewpixels-pa.googleapis.com"
 ```
 
+## Build
+
+1. Build the extension:
+
+   ```bash
+   bun run build
+   ```
+
+2. Upgrade the extension:
+
+   ```bash
+   bun run upgrade <path>
+   ```
+
+   > Replace `<path>` with the path of the Directus `extensions` folder, e.g. `../directus/extensions/`.
+
+   This will copy the built extension to the Directus extensions folder.
+
 ## Development
 
 1. Install dependencies:
@@ -59,21 +77,3 @@ To automatically reload the extension when changes are made, without having to r
    ```bash
    bun dev
    ```
-
-## Build
-
-1. Build the extension:
-
-   ```bash
-   bun run build
-   ```
-
-2. Upgrade the extension:
-
-   ```bash
-   bun run upgrade <path>
-   ```
-
-   > Replace `<path>` with the path of the Directus `extensions` folder, e.g. `../directus/extensions/`.
-
-   This will copy the built extension to the Directus extensions folder.
